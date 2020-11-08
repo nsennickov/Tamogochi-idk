@@ -1,0 +1,138 @@
+body{
+    margin: 0;
+}
+
+.wrapper{
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 50%;
+    max-width: 620px;
+    height: 800px;
+    background-color: grey;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.switch-btn{
+    height: 40px;
+    width: 130px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+/******************************************************************************************************************************/
+.photo-wrapper{
+    margin: 0 auto;
+
+    width: 80%;
+    height: 50%;
+    position: relative;
+}
+
+#photo{
+    width: 100%;
+    height: 100%;
+}
+
+
+/******************************************************************************************************************************/
+.doing-wrapper{
+    box-sizing: border-box;
+    width: 100%;
+    height: 150px;
+    background-color: lightgrey;
+    border: 2px dashed black;
+    padding: 0 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.methods-wrapper{
+    box-sizing: border-box;
+    width: 100%;
+    height: 150px;
+    padding: 0 20px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.method-btn-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.methods-btn{
+    width: 100px;
+    height: 20px;
+}
+
+
+.doing{
+    position: absolute;
+    animation: doingAnim 3s linear;
+}
+
+.spider-web{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: spiderWeb 5s linear;
+    z-index: 99;
+}
+
+.spider-web-image{
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes doingAnim{
+    0%{
+        transform: translate(200%);
+    }
+    50%{
+        transform: translate(100%);
+    }
+    100%{
+        transform: translate(0);
+    }
+    
+}
+
+
+
+@keyframes spiderWeb{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+    50%{
+        transform: scale(0);
+    }
+    60%{
+        transform: scale(1.3);
+    }
+    80%{
+        transform: scale(5);
+        backdrop-filter: blur(8px);
+    }
+    100%{
+        transform: scale(15);
+        backdrop-filter: blur(10px);
+    }
+}
+/******************************************************************************************************************************/
+
